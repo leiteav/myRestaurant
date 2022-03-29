@@ -1,0 +1,7 @@
+{
+  "name": "myRestaurant",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
