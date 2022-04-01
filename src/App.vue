@@ -81,6 +81,8 @@ import {
   newspaperOutline,
   helpCircleOutline,
   settingsOutline,
+  shieldCheckmarkOutline, pizzaOutline,
+  homeOutline
 } from "ionicons/icons";
 
 export default defineComponent({
@@ -103,32 +105,38 @@ export default defineComponent({
     const selectedIndex = ref(0);
     const appPages = [
       {
+        title: "Menu",
+        url: "/folder/Menu",
+        iosIcon: homeOutline,
+        mdIcon: homeOutline,
+      },
+      {
         title: "Endereços",
-        url: "/folder/Inbox",
+        url: "/folder/Endereços",
         iosIcon: locationOutline,
         mdIcon: locationOutline,
       },
       {
         title: "Favoritos",
-        url: "/folder/Favorites",
+        url: "/folder/Favoritos",
         iosIcon: heartOutline,
         mdIcon: heartSharp,
       },
       {
         title: "Pagamentos",
-        url: "/folder/Trash",
+        url: "/folder/Pagamentos",
         iosIcon: cardOutline,
         mdIcon: cardOutline,
       },
       {
-        title: "Meu pedidos",
-        url: "/folder/Spam",
+        title: "Meus pedidos",
+        url: "/folder/Meus Pedidos",
         iosIcon: receiptOutline,
         mdIcon: receiptOutline,
       },
       {
         title: "Meus dados",
-        url: "/folder/Archived",
+        url: "/folder/Meus Dados",
         iosIcon: newspaperOutline,
         mdIcon: newspaperOutline,
       },
@@ -144,11 +152,11 @@ export default defineComponent({
       },
       {
         name: "Segurança",
-        icon: "",
+        icon: shieldCheckmarkOutline,
       },
       {
         name: "Sugerir pratos",
-        icon: "",
+        icon: pizzaOutline,
       },
     ];
 
