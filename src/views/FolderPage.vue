@@ -27,28 +27,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { 
-    IonButtons,
-    IonContent,
-    IonHeader,
-    IonMenuButton,
-    IonPage,
-    IonTitle,
-    IonToolbar
-} from '@ionic/vue';
-import MenuCardapio from './MenuCardapio.vue'
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage,
+         IonTitle, IonToolbar } from '@ionic/vue';
+import MenuCardapio from './MenuCardapio.vue';
+
 export default defineComponent({
     name: 'FolderPage',
     components: {
-        IonButtons,
-        IonContent,
-        IonHeader,
-        IonMenuButton,
-        IonPage,
-        IonTitle,
-        IonToolbar,
-        MenuCardapio
-    },
+      IonButtons, IonContent, IonHeader, IonMenuButton, IonPage,
+      IonTitle, IonToolbar, MenuCardapio },
     methods: {
         checarCard(id) {
             switch (id) {
