@@ -130,13 +130,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.body-layout {
-    height: 100%;
-    margin: 20px;
-    color: white;
-    align-items: start;
-
-}
 h1{
     text-align: left;
 }
@@ -147,5 +140,10 @@ img {
 }
 ion-footer{
     position: fixed;
+}
+ion-fab{
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
 }
 </style>

@@ -20,6 +20,9 @@
             <div v-if="checarCard($route.params.id) == 1">
                 <MenuCardapio />
             </div>
+            <div v-if="checarCard($route.params.id) == 2">
+                <Enderecos />
+            </div>            
         </div>
     </ion-content>
 </ion-page>
@@ -30,17 +33,20 @@ import { defineComponent } from 'vue';
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage,
          IonTitle, IonToolbar } from '@ionic/vue';
 import MenuCardapio from './MenuCardapio.vue';
+import Enderecos from './Enderecos.vue';
 
 export default defineComponent({
     name: 'FolderPage',
     components: {
       IonButtons, IonContent, IonHeader, IonMenuButton, IonPage,
-      IonTitle, IonToolbar, MenuCardapio },
+      IonTitle, IonToolbar, MenuCardapio, Enderecos },
     methods: {
-        checarCard(id) {
-            switch (id) {
+        checarCard(value) {
+            switch (value) {
                 case "Menu":
                     return 1;
+                 case "Endereços":
+                    return 2;                   
                 default:
                     return 0;
             }
