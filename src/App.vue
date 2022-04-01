@@ -69,20 +69,19 @@ import {
 } from "@ionic/vue";
 import { defineComponent, ref } from "vue";
 import { useRoute } from "vue-router";
-import {
-  locationOutline,
+import { locationOutline,
   archiveOutline,
   bookmarkOutline,
   heartOutline,
-  heartSharp,
   paperPlaneOutline,
   cardOutline,
   receiptOutline,
   newspaperOutline,
   helpCircleOutline,
   settingsOutline,
-  shieldCheckmarkOutline, pizzaOutline,
-  homeOutline
+  shieldCheckmarkOutline,
+  pizzaOutline,
+  homeOutline,
 } from "ionicons/icons";
 
 export default defineComponent({
@@ -120,7 +119,7 @@ export default defineComponent({
         title: "Favoritos",
         url: "/folder/Favoritos",
         iosIcon: heartOutline,
-        mdIcon: heartSharp,
+        mdIcon: heartOutline,
       },
       {
         title: "Pagamentos",
@@ -176,7 +175,6 @@ export default defineComponent({
       archiveOutline,
       bookmarkOutline,
       heartOutline,
-      heartSharp,
       paperPlaneOutline,
       isSelected: (url: string) => (url === route.path ? "selected" : ""),
     };

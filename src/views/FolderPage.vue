@@ -17,8 +17,9 @@
       </ion-header>
     
       <div id="container">
-        <strong class="capitalize">{{ $route.params.id }}</strong>
-        <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+        <div v-if="checarCard($route.params.id) == 1"> 
+          <MenuCardapio/>
+        </div>
       </div>
     </ion-content>
   </ion-page>
@@ -27,7 +28,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
-
+import MenuCardapio from './MenuCardapio'
 export default defineComponent({
   name: 'FolderPage',
   components: {
@@ -37,7 +38,21 @@ export default defineComponent({
     IonMenuButton,
     IonPage,
     IonTitle,
-    IonToolbar
+    IonToolbar,
+    MenuCardapio
+  }, 
+  afterMount(){
+    console.log(this.$route)
+  },
+  methods: {
+  checarCard(value){
+      switch (value) {
+        case "Menu":
+          return 1;
+        default:
+          return 0;  
+      }
+    }
   }
 });
 </script>
