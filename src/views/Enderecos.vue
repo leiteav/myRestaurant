@@ -30,6 +30,7 @@
 <script>
 import { defineComponent } from 'vue';
 import { add } from "ionicons/icons";
+import ConsultaDistritoSP from '../service/ConsultaDistritoSP.js';
 
 
 export default defineComponent({
@@ -37,6 +38,16 @@ export default defineComponent({
     data(){
         return {
             add: add
+        }
+    },
+    methods:{
+        carregarCidades(){
+            apiIBGE.get()
+                .then((res) => mapearCidades(res.data))
+                .catch((err) => console.error(err));
+        },
+        mapearCidades(data){
+            console.log(data);
         }
     }
 });
